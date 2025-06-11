@@ -1,0 +1,24 @@
+Nicusor Albert 23 7 1965 Ateneului 2 A 10 264-271 Pediatru 1
+Kreolla Anghel 5 12 1970 Pacurari 26 1 1 245-646 Ginecolog 2
+Alina Axinte 18 3 1945 Al.celBun 40 0 2 317-914 Chirurg 3
+Crina Iacob 30 1 1962 Nicolina 93 0 3 418-586 Cardiolog 4
+Eugen Hutanu 11 11 1970 Otelari 16 F 1 808-991 Neurolog 5
+_
+Cosmin Iacob 11 7 1987 H.Sendrea 2 0 1 227-445 Pediatru
+Eduard Craciuc 7 10 1989 Tutora 4 C 4 228-066 Urolog
+Nica Horia 25 1 1986 A.Vlaicu 86 0 36 217-012 Ginecolog
+Cristian Melescan 1 4 1988 Independ. 13 0 10 230-464 Neurolog
+Ioana Petcu 16 8 1990 Silvestru 10 A 22 213-862 Oftalmolog
+_
+Dorina Razusi 6 6 1990 Pacurari 160 1 1 234-389 Hepatita 10
+Camelia Bedelita 21 10 1985 Sf.Lazar 27 B 37 422-011 Gripa 11
+Gabriela Bunduc 27 4 1958 N.Iorga 6 0 2 935-953 Scarlatina 12
+Eugen Rusnac 13 5 1992 v.Lupu 128 2 1 272-762 Difterie 14
+Ioana Necula 17 2 1975 Cuza 38 0 10 261-712 Viroza 15
+_
+Gabriel Birca 15 5 1950 A.Panu 23 3 65 261-820 Gonoree
+Sebastian Bia 1 12 2001 Bd.Carol 14 0 2 537-707 Parotida
+Eleana Botnariu 2 9 1995 Bradului 1 B 1 220-789 Febra
+Ileana Capatu 24 3 1989 I.Creanga 51 T 29 816-522 Insomnie
+Lucian Damia 19 5 1973 Unirii 6 0 45 743-025-874 Rujeola
+_
