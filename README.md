@@ -1,8 +1,6 @@
-# Polymorphism
+# Console Hospital Manager
 
-Simple demonstration of [Polymorphism](https://en.wikipedia.org/wiki/Polymorphism_(computer_science)) in C++.
-
-The concept is demonstrated using interactive console application that simulates a hospital management system. It is a more complex version of the [Polymorphism repo](https://github.com/Iulian-Stan/Polymorphism).
+This project implements an interactive console application that simulates a hospital management system. It is a more complex version of the [polymorphism repo](https://github.com/iulian-stan/polymorphism).
 
 Running the example with CMake:
 
