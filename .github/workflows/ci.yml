@@ -1,0 +1,61 @@
+name: Continuous Integration (build & test)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        build_type: [Debug, Release]
+
+    runs-on: windows-latest  # For a list of available runner types, refer to
+                             # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
+
+    env:
+      Artifact_Name: hospital
+
+    steps:
+
+    # Checkout the repository
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Set reusable strings
+      # Turn repeated input strings (such as the build output directory) into step outputs. These step outputs can be used throughout the workflow file.
+      id: strings
+      shell: bash
+      run: |
+        echo "build-output-dir=${{ github.workspace }}/build" >> "$GITHUB_OUTPUT"
+
+    - name: Configure CMake
+      # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
+      # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
+      run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{ env.build_type }}
+      env:
+        build_type: ${{ matrix.build_type }}
+
+    - name: Build
+      # Build your program with the given configuration. Note that --config is needed because the default Windows generator is a multi-config generator (Visual Studio generator).
+      run: cmake --build ${{ steps.strings.outputs.build-output-dir }} --config ${{ env.build_type }}
+      env:
+        build_type: ${{ matrix.build_type }}
+
+    #- name: Test
+    #  working-directory: ${{ steps.strings.outputs.build-output-dir }}
+    #  # Execute tests defined by the CMake configuration. Note that --build-config is needed because the default Windows generator is a multi-config generator (Visual Studio generator).
+    #  # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
+    #  run: ctest -C ${{ env.build_type }}
+    #  env:
+    #    build_type: ${{ matrix.build_type }}
+
+    # Upload the artifacts
+    - name: Upload build archive
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{ env.Artifact_Name }}-${{ env.build_type }}
+        path: ${{ steps.strings.outputs.build-output-dir }}/${{ env.build_type }}/
+      env:
+        build_type: ${{ matrix.build_type }}

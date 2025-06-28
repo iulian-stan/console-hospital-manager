@@ -21,7 +21,7 @@ Running the example with CMake:
 
 4. Run the generated example
     ```
-    > HOSPITAL.exe
+    > hospital.exe
     Hospital:
 
             1 - Staff
